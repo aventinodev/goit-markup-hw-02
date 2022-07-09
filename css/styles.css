@@ -1,8 +1,7 @@
 :root {
-  --primary-text-color: ;
-
-  --title-text-color: ;
-  --accent-color: ;
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
 }
 
 /* primary-text-color: #757575;
@@ -18,8 +17,44 @@ roboto 900  700 500 400
 Raleway 700
 
 */
-.site-nav {
+body {
+  font-family: 'roboto', sans-serif;
+  color: var(--primary-text-color);
 }
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.logo {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  color: #000000;
+}
+.logo > span {
+  color: var(--accent-color);
 
-.button {
+  .main-nav {
+  }
+}
+.site-nav {
+  font-family: 'roboto';
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--title-text-color);
+}
+.site-nav a {
+  color: inherit;
+}
+/* хотіла уточнити чи треба додавати focus */
+.site-nav a:hover,
+.site-nav a:focus {
+  color: var(--accent-color);
+}
+.site-nav a :active {
+  color: var(--accent-color);
+}
+.site-nav a:visited .button {
 }
