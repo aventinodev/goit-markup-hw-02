@@ -32,14 +32,11 @@ ul {
 }
 .logo > span {
   color: #000000;
-  }}
-
-.main-nav{}
-
+}
 .site-link {
   font-weight: 500;
   font-size: 14px;
-  line-height: ;
+  line-height: 1.2;
   color: var(--title-text-color);
 }
 
@@ -47,7 +44,7 @@ ul {
 .site-link:focus {
   color: var(--accent-color);
 }
-/*не працює (: why? */
+/*не працює, why? */
 .site-link:active {
   color: var(--accent-color);
 }
@@ -55,7 +52,7 @@ ul {
 .contact-link {
   font-weight: 500;
   font-size: 14px;
-  color: var(--primary-text-color)
+  color: var(--primary-text-color);
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -71,14 +68,13 @@ ul {
 .hero-title {
   font-weight: 900;
   font-size: 44px;
-  line-height: ;  
+  line-height: 1.2;
   color: #ffffff;
-    
 }
 .button {
   font-weight: 700;
   font-size: 16px;
-  line-height: ;
+  line-height: 1.2;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.15);
   border: none;
@@ -89,15 +85,12 @@ ul {
   background-color: var(--accent-color);
 }
 /* feature */
-.feature {
 
-}
 .feature-title {
   visibility: hidden;
-
 }
 /* footer */
-.footer .logo span {
+.footer span {
   color: #ffffff;
 }
 .footer {
@@ -105,13 +98,13 @@ ul {
 }
 .address-link {
   font-size: 14px;
-  line-height: ;
+  line-height: 1.2;
   color: #ffffff;
   font-style: normal;
 }
 .footer .link {
   font-size: 14px;
-  line-height: ;
+  line-height: 1.2;
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
 }
