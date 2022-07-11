@@ -48,7 +48,7 @@ ul {
   color: var(--accent-color);
 }
 /*не працює (: why? */
-.site-link: active {
+.site-link:active {
   color: var(--accent-color);
 }
 
