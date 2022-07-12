@@ -5,8 +5,11 @@
 }
 
 /*
-black: #000000 ( header logo
-white: #ffffff; footer logo
+--primary-text-color - p tel mail
+--title-text-color - title, кроме h1 
+black: #000000; (header logo)
+white: #ffffff; (footer logo)
+page background-color: #ffffff
 background-color: #2F303A
 white: #ffffff;  60%  
 rgba(255, 255, 255, 0.6) footer link
@@ -16,42 +19,47 @@ Raleway 700
 */
 body {
   font-family: 'roboto', sans-serif;
-  color: var(--primary-text-color);
+  font-weight: 700;
+  color: var(--title-text-color);
+  background-color: #ffffff;
 }
-a {
+.link {
   text-decoration: none;
 }
-ul {
+.list {
   list-style: none;
 }
+
 .logo {
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
+  line-height: 1.19;
   color: var(--accent-color);
 }
-.logo > span {
+.header-logo span {
   color: #000000;
 }
-.site-link {
+.nav-link {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.14;
   color: var(--title-text-color);
 }
 
-.site-link:hover,
-.site-link:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--accent-color);
 }
 /*не працює, why? */
-.site-link:active {
+.nav-link:active {
   color: var(--accent-color);
 }
 
 .contact-link {
   font-weight: 500;
   font-size: 14px;
+  line-height: 1.14;
   color: var(--primary-text-color);
 }
 .contact-link:hover,
@@ -59,52 +67,104 @@ ul {
   color: var(--accent-color);
 }
 /* main */
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.text {
+}
+/* hero */
 .hero {
   background-color: #2f303a;
 }
-/* 
 
-*/
 .hero-title {
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.2;
+  line-height: 1.36;
+  text-transform: uppercase;
   color: #ffffff;
+  text-align: center;
 }
-.button {
+.btn {
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.88;
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.15);
+  text-align: center;
+  /*фон кнопки співпадає з фоном всієї секції. 
+  Вказую, бо ще не знаю, який буде подальший дизайн  */
+  background-color: var(--accent-color);
   border: none;
   border-radius: 4px;
 }
-.button:hover,
-.button:focus {
-  background-color: var(--accent-color);
+.btn:hover,
+.btn:focus {
+  background-color: #188ce8;
 }
-/* feature */
 
-.feature-title {
+/* feature */
+.feature .title {
   visibility: hidden;
 }
-/* footer */
-.footer span {
-  color: #ffffff;
+
+.feature-subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
 }
+
+.feature-descr {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--primary-text-color);
+}
+/* activities */
+
+/* team */
+.team-subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+.post {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19px;
+  text-align: center;
+  color: var(--primary-text-color);
+}
+/* footer */
+
 .footer {
   background-color: #2f303a;
 }
-.address-link {
-  font-size: 14px;
-  line-height: 1.2;
+.footer-logo span {
   color: #ffffff;
-  font-style: normal;
 }
-.footer .link {
+
+.footer-link {
+  font-weight: 400;
   font-size: 14px;
-  line-height: 1.2;
-  color: rgba(255, 255, 255, 0.6);
   font-style: normal;
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+}
+a[href="https://goo.gl/maps/JHCXsqgSBJYCVwFo8"]
+{
+  color: #ffffff;
+}
+/* portfolio */
+.portfolio .hero-title {
+  color: #000000;
+  visibility: hidden;
+}
+.projects .title {
 }
