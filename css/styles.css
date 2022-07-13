@@ -19,9 +19,10 @@ Raleway 700
 */
 body {
   font-family: 'roboto', sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--title-text-color);
   background-color: #ffffff;
+  letter-spacing: 0.03em;
 }
 .link {
   text-decoration: none;
@@ -31,51 +32,69 @@ body {
 }
 
 .logo {
-  font-family: 'Raleway';
+  font-family: 'Raleway' sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   color: var(--accent-color);
 }
-.header-logo span {
-  color: #000000;
-}
-.nav-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  color: var(--title-text-color);
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--accent-color);
-}
-/*не працює, why? */
-.nav-link:active {
-  color: var(--accent-color);
-}
-
-.contact-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  color: var(--primary-text-color);
-}
-.contact-link:hover,
-.contact-link:focus {
-  color: var(--accent-color);
-}
-/* main */
 .title {
-  font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
 }
-
-.text {
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
+.btn {
+  font-size: 16px;
+  text-align: center;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.header-logo span {
+  color: #000000;
+}
+.header-nav-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+}
+
+.header-nav-link:hover,
+.header-nav-link:focus {
+  color: var(--accent-color);
+}
+/*не працює, why? */
+.header-nav-link:active {
+  color: var(--accent-color);
+}
+
+.header-contact-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+.header-contact-link:hover,
+.header-contact-link:focus {
+  color: var(--accent-color);
+}
+/* main */
+
 /* hero */
 .hero {
   background-color: #2f303a;
@@ -85,33 +104,27 @@ body {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
   text-align: center;
 }
-.btn {
+.hero-btn {
   font-weight: 700;
-  font-size: 16px;
   line-height: 1.88;
   color: #ffffff;
-  text-align: center;
-  /*фон кнопки співпадає з фоном всієї секції. 
-  Вказую, бо ще не знаю, який буде подальший дизайн  */
+  letter-spacing: 0.06em;
+
   background-color: var(--accent-color);
-  border: none;
-  border-radius: 4px;
 }
-.btn:hover,
-.btn:focus {
+.hero-btn:hover,
+.hero-btn:focus {
   background-color: #188ce8;
 }
 
 /* feature */
-.feature .title {
-  visibility: hidden;
-}
 
-.feature-subtitle {
+.features-subtitle {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -119,8 +132,7 @@ body {
   text-transform: uppercase;
 }
 
-.feature-descr {
-  font-weight: 400;
+.features-descr {
   font-size: 14px;
   line-height: 1.71;
   color: var(--primary-text-color);
@@ -134,8 +146,7 @@ body {
   line-height: 1.19;
   text-align: center;
 }
-.post {
-  font-weight: 400;
+.team-descr {
   font-size: 16px;
   line-height: 1.19px;
   text-align: center;
@@ -150,21 +161,45 @@ body {
   color: #ffffff;
 }
 
-.footer-link {
-  font-weight: 400;
-  font-size: 14px;
+.address {
   font-style: normal;
+}
+
+.footer-contact-link {
+  font-size: 14px;
   line-height: 1.71;
+  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-a[href="https://goo.gl/maps/JHCXsqgSBJYCVwFo8"]
+.footer-contact-link[href="https://goo.gl/maps/JHCXsqgSBJYCVwFo8"]
 {
   color: #ffffff;
 }
+
 /* portfolio */
-.portfolio .hero-title {
-  color: #000000;
-  visibility: hidden;
+.filter-btn {
+  font-weight: 500;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
 }
-.projects .title {
+
+.filter-btn:hover,
+.filter-btn:focus {
+  color: var(--color-white);
+  background-color: var(--accent-color);
+}
+
+.projects-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  text-align: left;
+  letter-spacing: 0.06em;
+}
+.projects-descr {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
 }
