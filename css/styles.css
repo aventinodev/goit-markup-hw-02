@@ -62,7 +62,7 @@ body {
   border: none;
   cursor: pointer;
 }
-.header-logo span {
+.header-logo {
   color: #000000;
 }
 .header-nav-link {
@@ -157,7 +157,7 @@ body {
 .footer {
   background-color: #2f303a;
 }
-.footer-logo span {
+.footer-logo {
   color: #ffffff;
 }
 
