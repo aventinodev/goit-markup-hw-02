@@ -2,26 +2,25 @@
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
+  --white-text-color: #ffffff;
+  --black-text-color: #000000;
+  /* footer, font white-transparency */
+  --transparent-white-text-color: rgba(255, 255, 255, 0.6);
+  /* hero,footer*/
+  --main-background-color: #2f303a;
+  --white-background-color: #ffffff;
+  /*hover-for-hero-btn:*/
+  --add-btn-accent-color: #188ce8;
+  /*team :*/
+  --add-background-color: #f5f4fa;
 }
 
-/*
---primary-text-color - p tel mail
---title-text-color - title, кроме h1 
-black: #000000; (header logo)
-white: #ffffff; (footer logo)
-page background-color: #ffffff
-background-color: #2F303A
-white: #ffffff;  60%  
-rgba(255, 255, 255, 0.6) footer link
-roboto 900  700 500 400
-Raleway 700
-
-*/
 body {
   font-family: 'roboto', sans-serif;
-  font-weight: 400;
   color: var(--title-text-color);
-  background-color: #ffffff;
+  background-color: var(--white-background-color);
+  /*letter-spacing в макеті зустрічається три значення цієї 
+  властивості. Цей самий розповсюджений, тому я його внесла в body*/
   letter-spacing: 0.03em;
 }
 .link {
@@ -55,15 +54,20 @@ body {
   clip-path: inset(50%);
   margin: -1px;
 }
+/* додає спільні (повторювані) стилі для всіх кнопок
+див. .hero-btn .filter-btn
+ */
 .btn {
+  font-family: inherit;
   font-size: 16px;
   text-align: center;
   border-radius: 4px;
   border: none;
   cursor: pointer;
 }
+
 .header-logo {
-  color: #000000;
+  color: var(--black-text-color);
 }
 .header-nav-link {
   font-weight: 500;
@@ -71,6 +75,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: inherit;
+  color: var(--title-text-color);
 }
 
 .header-nav-link:hover,
@@ -79,6 +84,9 @@ body {
 }
 /*не працює, why? */
 .header-nav-link:active {
+  color: var(--accent-color);
+}
+.current {
   color: var(--accent-color);
 }
 
@@ -97,29 +105,29 @@ body {
 
 /* hero */
 .hero {
-  background-color: #2f303a;
+  background-color: var(--main-background-color);
 }
 
 .hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
+  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
-  text-align: center;
+  color: var(--white-text-color);
 }
 .hero-btn {
   font-weight: 700;
   line-height: 1.88;
-  color: #ffffff;
   letter-spacing: 0.06em;
+  color: var(--white-text-color);
 
   background-color: var(--accent-color);
 }
 .hero-btn:hover,
 .hero-btn:focus {
-  background-color: #188ce8;
+  background-color: var(--add-btn-accent-color);
 }
 
 /* feature */
@@ -128,7 +136,6 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -140,6 +147,12 @@ body {
 /* activities */
 
 /* team */
+.team {
+  background-color: var(--add-background-color);
+}
+.team-item {
+  background-color: var(--white-text-color);
+}
 .team-subtitle {
   font-weight: 500;
   font-size: 16px;
@@ -155,10 +168,10 @@ body {
 /* footer */
 
 .footer {
-  background-color: #2f303a;
+  background-color: var(--main-background-color);
 }
 .footer-logo {
-  color: #ffffff;
+  color: var(--white-text-color);
 }
 
 .address {
@@ -169,11 +182,15 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--transparent-white-text-color);
 }
 .footer-contact-link[href="https://goo.gl/maps/JHCXsqgSBJYCVwFo8"]
 {
-  color: #ffffff;
+  color: var(--white-text-color);
+}
+.footer-contact-link:hover,
+.footer-contact-link:focus {
+  color: var(--accent-color);
 }
 
 /* portfolio */
@@ -186,7 +203,11 @@ body {
 
 .filter-btn:hover,
 .filter-btn:focus {
-  color: var(--color-white);
+  color: var(--white-text-color);
+  background-color: var(--accent-color);
+}
+.current-btn {
+  color: var(--white-text-color);
   background-color: var(--accent-color);
 }
 
@@ -200,6 +221,5 @@ body {
 .projects-descr {
   font-size: 16px;
   line-height: 1.88;
-  letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
